@@ -1,6 +1,8 @@
 import { Roboto } from 'next/font/google'
 import { Header } from "app/components/shared/Header";
 import { Footer } from "app/components/shared/Footer";
+import { Hero } from 'app/components/home/Hero';
+import { Description } from 'app/components/home/Description';
 import "app/sass/globals.sass"
 
 const roboto = Roboto({
@@ -17,6 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <Header />
+        <Hero />
+        <Description />
         {children}
         <Footer />
       </body>
