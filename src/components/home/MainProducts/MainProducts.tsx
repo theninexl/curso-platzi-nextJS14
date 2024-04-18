@@ -9,6 +9,7 @@ const getProducts = async () => {
         'X-Shopify-Access-Token': process.env.SHOPIFY_API_KEY as string,
       }
     })
+    
     const { products } = await response.json();
     return products
   } catch(error) {
